@@ -1,0 +1,36 @@
+<div class="container" style="margin-top:20px">
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3">
+            <button class="btn btn-primary clear-cart-btn" (click)="clearCart()" style="float:right">Clear Cart</button>
+        </div>
+    </div>
+    <div class="row" style="margin-top:30px">
+        <div class="col-md-8" *ngFor="let product of cartItems$ | async"
+            style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px; margin-bottom: 20px;">
+            <div class="d-flex align-items-center">
+                <img [src]="product.imageUrl" alt="{{ product.name }}" class="w-16 h-auto rounded mr-4 img-style">
+                <div>
+                    <h4>{{ product.name }}</h4>
+                    <p>{{ product.description }}</p>
+                    <p>Total Price: ₹{{ product.price * product.quantity }}</p>
+                    <div>
+                        <button (click)="decrementQuantity(product.id)"
+                            class="border border-gray-300 px-2 py-1">-</button>
+                        <span class="px-4">{{ product.quantity }}</span>
+                        <button (click)="incrementQuantity(product.id)"
+                            class="border border-gray-300 px-2 py-1">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4"
+            style=" box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px; margin-bottom: 20px;position: fixed;right:20px">
+            <h4>Total Cart Price: ₹{{ totalCartPrice }}</h4>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,88 @@
+.product-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    background-color: #48bb78;
+}
+
+.product-item img {
+    width: 64px;
+    height: auto;
+    border-radius: 0.25rem;
+}
+
+.product-item .product-info {
+    font-size: 0.875rem;
+    color: #4a5568;
+}
+
+.product-item h3 {
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.product-item .price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a202c;
+}
+
+.product-item .original-price {
+    text-decoration: line-through;
+    color: #a0aec0;
+    margin-left: 0.5rem;
+}
+
+.product-item .discount {
+    margin-left: 0.5rem;
+    color: #48bb78;
+}
+
+.product-item button {
+    padding: 0.5rem;
+    border: 1px solid #e2e8f0;
+    background-color: #fff;
+}
+
+.product-item button:hover {
+    background-color: #f7fafc;
+}
+
+.clear-cart-btn {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #0d6efd;
+}
+
+.img-style {
+    height: 143px !important;
+    width: 143px !important;
+}
+
+.total-price {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    position: fixed;
+    right: 20px
+}
+
+.coupon-form {
+    display: flex;
+    align-items: center;
+    /* Vertically align the button with the input */
+    gap: 10px;
+    /* Add space between input and button */
+}
+
+.coupon-form .form-control {
+    flex: 1;
+    /* Make the input take up available space */
+}
+
+.coupon-form .btn {
+    white-space: nowrap;
+    /* Prevent the button text from wrapping */
+}

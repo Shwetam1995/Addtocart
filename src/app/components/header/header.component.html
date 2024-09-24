@@ -1,0 +1,18 @@
+<nav class="navbar">
+    <div class="navbar-left">
+        <a (click)="goToProducts()" class="brand text-decoration-none" style="z-index: 10; cursor: pointer;">Grocery</a>
+        <!-- Uncomment the search bar if needed -->
+        <!-- <div class="search-bar">
+            <input type="text" placeholder="Search products" (input)="onSearch($event)" />
+
+        </div> -->
+
+    </div>
+    <div class="navbar-right">
+        <span class="location"><i class="fa fa-map-marker"></i> Delivery to 411028</span>
+        <span class="cart" *ngIf="!isCartPage()" (click)="goToCart()">
+            <i class="fa fa-shopping-cart"></i> Cart
+            <span class="cart-count">{{ itemsCount$ | async }}</span>
+        </span>
+    </div>
+</nav>

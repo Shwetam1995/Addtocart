@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3" *ngFor="let product of productItems$ | async">
+            <div class="card">
+                <img [src]="product.imageUrl" class="card-img-top product-img img-responsive" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <div class="product-price">
+                        <span class="current-price">Price: {{ product.price }}</span>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 product-quantity">
+                            <span>{{ product.description }}</span>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="add-item-btn" (click)="addItem(product)">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
